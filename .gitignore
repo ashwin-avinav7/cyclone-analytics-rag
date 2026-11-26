@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+document_qa/docs/
+document_qa/index/
+machine_analysis/data*.xlsx
+machine_analysis/data*.csv
+machine_analysis/*.parquet
+
