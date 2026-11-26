@@ -18,7 +18,29 @@ document_qa/
   requirements.txt        RAG dependencies
 ```
 
-The original dataset, input PDFs, generated indexes, and output artifacts are not included. To run the code, supply data and documents you have permission to use. The two pipelines were developed for a specific dataset and document corpus; results and thresholds may need adjustment for other inputs.
+The original dataset, input PDFs, and generated indexes are not included. Selected plots and a sample answer from the original run are shown below. To run the code, supply data and documents you have permission to use. The two pipelines were developed for a specific dataset and document corpus; results and thresholds may need adjustment for other inputs.
+
+## Example results
+
+These figures show results from the original analysis; the underlying input data is not included.
+
+### Shutdown detection
+
+![Detected shutdown periods over a year](assets/shutdowns.jpg)
+
+### Operating states
+
+![Sensor profiles for operating states](assets/operating_states.jpg)
+
+### Forecast comparison
+
+![Forecast RMSE and MAE across horizons](assets/forecast.jpg)
+
+### RAG answer with source citation
+
+![Example terminal output showing a model summary and cited source](assets/rag_output.jpg)
+
+The example answer was produced from the original document collection, which is not included in this repository.
 
 ## Machine analysis
 
@@ -36,7 +58,7 @@ Place a compatible dataset in this folder as `data.xlsx`, `data.csv`, or `data_r
 .\.venv\Scripts\python.exe task1_analysis.py
 ```
 
-The analysis expects a timestamp and six cyclone sensor columns; inspect `load_and_inspect_raw_data` and the script's preprocessing code for the expected schema. It writes CSV reports and plots to the same folder. The fixed dates, thresholds, and case studies reflect the original analysis and need review when using other data.
+The analysis expects a timestamp and six cyclone sensor columns; inspect `load_and_inspect_raw_data` and the script's preprocessing code for the expected schema. It writes CSV reports and plots to the same folder. The fixed dates and thresholds reflect the original analysis and need review when using other data. Dataset-specific case study code is omitted from this public version.
 
 ## Document Q&A
 
