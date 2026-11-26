@@ -1,0 +1,9 @@
+pypdf>=5,<7
+numpy>=1.26,<3
+faiss-cpu>=1.9,<2
+sentence-transformers>=3,<6
+transformers>=4.45,<5
+torch>=2.4,<3
+scikit-learn>=1.4,<2
+
+
